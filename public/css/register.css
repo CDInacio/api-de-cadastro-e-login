@@ -1,0 +1,140 @@
+/* reset */
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: #99582A;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f8f8f8;
+    transition: opacity 0.5s;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    margin-top: 70px;
+    background-color: red;
+    width: 70vw;
+    height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ffff;
+}
+
+.form-area {
+    width: 50%;
+}
+
+.form-container {
+    margin-top: 30%;
+    margin-left: 20%;
+}
+
+.form-group {
+    padding: 10px;
+}
+
+.banner-area {
+    width: 50%;
+
+}
+
+.banner-area img {
+     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.register {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    color: #292929;
+    margin-left: 100px;
+    margin-bottom: 40px;
+}
+
+input {
+    margin-left: 10px;
+    border-bottom: 1px solid #999;
+}
+
+input[type="name"]:focus, input[type="email"]:focus, input[type="password"]:focus{
+    transition: 0.4s ease-in;
+    border-bottom: 1px solid #99582A;
+}
+
+input:focus {
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+}
+
+button {
+    border-radius: 3px;
+    color: #ffff;
+    background-color: #99582A;
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+}
+
+:focus::-webkit-input-placeholder {
+    color: #ccc; 
+}
+
+/* button animation */
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.bt {
+    color: #99582A;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 1s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+.erros{
+    padding: 5px 40px 5px 40px;
+    color: #EF233C;
+    border-radius: 4px;
+    position: absolute;
+    margin-left: 110px;
+    margin-top: 40px;
+}
+

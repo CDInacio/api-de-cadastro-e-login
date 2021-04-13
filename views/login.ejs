@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!--css -->
+    <link rel="stylesheet" href="/css/register.css">
+
+    <script src="/js/style.js"></script>
+
+    <script>
+        window.transitionToPage = function (href) {
+                document.querySelector('body').style.opacity = 0
+                setTimeout(function () {
+                    window.location.href = href
+                }, 600)
+            }
+
+            document.addEventListener('DOMContentLoaded', function (event) {
+                document.querySelector('body').style.opacity = 1
+            })
+    </script>
+
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <div class="main">
+        <div class="container">
+            <div class="form-area">
+                <div class="erros">
+                    <%- include ("./partials/messages"); %>
+                </div>
+                <div class="form-container">
+                    <form action="/user/login" method="POST" class="register-form">
+                        <div class="form-group">
+                            <div class="register">Login</div>
+                            <label for="email"><i class="fas fa-envelope"></i></label>
+                            <input type="email" name="email" placeholder="Your Email" size="40">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password"><i class="fas fa-lock"></i></label>
+                            <input type="password" name="password" placeholder="Your Password" size="40">
+                        </div>
+
+                        <div class="form-group button">
+                            <button type="submit" size="35"><span>Login</span></button>
+                        </div>
+                        <div class="form-group space">
+                            Não possui uma conta? <span class="bt" onclick="transitionToPage('/user/register')">Criar conta</span>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="banner-area">
+                <img src="/img/foto6.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
